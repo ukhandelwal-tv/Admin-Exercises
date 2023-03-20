@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>start_email_validation</fullName>
+    <active>true</active>
+    <description>Block all leads where,  the email starts with info@, contact@, Career@.</description>
+    <errorConditionFormula>IF( LEFT( Email , 5) = &quot;info@&quot; , true, false) ||
+IF( LEFT( Email , 8) = &quot;contact@&quot; , true, false) ||
+IF( LEFT( Email , 7) = &quot;career@&quot; , true, false)</errorConditionFormula>
+    <errorMessage>email should not start with info@, contact@, Career@</errorMessage>
+</ValidationRule>

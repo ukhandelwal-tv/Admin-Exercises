@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validation_to_check_reason_field</fullName>
+    <active>true</active>
+    <description>validation rule to make sure that, whenever lead is marked as Unqualified, the Reason (reason__c) field is required. She has a task to make sure that the validation rule shouldn’t trigger for cloned and new records.</description>
+    <errorConditionFormula>IF( Toggle__c = true, true, false) &amp;&amp; ISBLANK(Reason__c )</errorConditionFormula>
+    <errorDisplayField>Reason__c</errorDisplayField>
+    <errorMessage>reason field can&apos;t be empty</errorMessage>
+</ValidationRule>

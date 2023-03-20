@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validate_email_domain</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( RIGHT( Email , 6) =  &quot;.games&quot;  , true, false) ||
+IF( RIGHT( Email , 7) =  &quot;.garden&quot; , true, false) ||
+IF( RIGHT( Email , 6) =  &quot;.glass&quot;  , true, false) ||
+IF( RIGHT( Email , 5) =  &quot;.free&quot;   , true, false) ||
+IF( RIGHT( Email , 5) =  &quot;.talk&quot;  , true, false)</errorConditionFormula>
+    <errorMessage>Lead email should not end with the following domains:
+(.games, .garden, .glass, .free, .talk)</errorMessage>
+</ValidationRule>
