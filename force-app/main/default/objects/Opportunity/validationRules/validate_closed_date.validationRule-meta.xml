@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validate_closed_date</fullName>
+    <active>true</active>
+    <description>Close Date is not greater than the last date of
+the current month.</description>
+    <errorConditionFormula>IF( MONTH( CloseDate ) &lt;&gt;  MONTH( TODAY() )  , true, false)</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>Current date should fall under the current month.</errorMessage>
+</ValidationRule>

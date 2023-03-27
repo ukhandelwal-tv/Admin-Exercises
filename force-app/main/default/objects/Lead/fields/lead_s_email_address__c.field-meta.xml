@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>lead_s_email_address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  $User.Username  = &quot;test-4ve1mxzej9xz@example.com&quot;, &quot;&quot;,  Email )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>lead&apos;s email address</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

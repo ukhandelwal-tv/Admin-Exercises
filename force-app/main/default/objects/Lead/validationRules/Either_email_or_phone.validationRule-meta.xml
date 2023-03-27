@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_email_or_phone</fullName>
+    <active>true</active>
+    <description>Either the Email or the Phone number, is required to create a lead in the system.</description>
+    <errorConditionFormula>AND(ISBLANK( Email ), ISBLANK( Phone ))</errorConditionFormula>
+    <errorMessage>Either the email or phone number should be filled</errorMessage>
+</ValidationRule>
